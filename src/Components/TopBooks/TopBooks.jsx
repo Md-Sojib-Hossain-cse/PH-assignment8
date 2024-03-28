@@ -11,7 +11,7 @@ const TopBooks = ({ book }) => {
                 <h3 className="text-xl font-bold">{title}</h3>
                 <p className="text-lg font-medium">By : {author}</p>
                 <p className="text-base font-normal">{description}</p>
-                <div className="flex justify-between text-lg font-normal">
+                <div className="flex flex-col md:flex-row justify-between text-lg font-normal">
                     <p>Genre : {genre}</p>
                     <p>Publisher : {publisher}</p>
                 </div>
