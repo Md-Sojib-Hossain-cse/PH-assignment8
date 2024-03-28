@@ -52,6 +52,9 @@ const BookDetails = () => {
                 localStorage.setItem('readList', JSON.stringify(updatedReadList))
                 toast.success("Book added to your Wishlist")
             }
+            else if(existInReadList){
+                toast.warn("Book is already in your ReadList")
+            }
             else {
                 toast.warn("Book is already in your Wishlist")
             }
@@ -62,6 +65,9 @@ const BookDetails = () => {
                 alternativeWishList.push(id);
                 localStorage.setItem('wishlist', JSON.stringify(alternativeWishList))
                 toast.success("Book added to your Wishlist")
+            }
+            else if(existInReadList){
+                toast.warn("Book is already in your ReadList")
             }
             else {
                 toast.warn("Book is already in your Wishlist")
