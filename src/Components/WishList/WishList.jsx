@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import ReadBookCard from "../ReadBookCard/ReadBookCard";
+import WishBookCard from "../WishBookCard/WishBookCard";
 
-const WishList = ({bookDetails}) => {
-    const [wishList , setWishList] = useState([]);
+const WishList = ({ bookDetails }) => {
+    const [wishList, setWishList] = useState([]);
 
 
     useEffect(() => {
@@ -12,24 +12,25 @@ const WishList = ({bookDetails}) => {
         const updatedWishList = [];
         lsWishList.map(wishBooks => {
             bookDetails.filter(book => {
-                if(wishBooks === book.bookId){
+                if (wishBooks === book.bookId) {
                     updatedWishList.push(book);
                 }
             })
             setWishList(updatedWishList);
         })
-    } , [bookDetails]);
+    }, [bookDetails]);
+
     return (
         <div className="space-y-4 lg:space-y-6 pt-8">
             {
-                wishList.map(readBook => <ReadBookCard key={readBook.bookId} readBook={readBook}></ReadBookCard>)
+                wishList.map(wishbook => <WishBookCard key={wishbook.bookId} wishbook={wishbook}></WishBookCard>)
             }
         </div>
     );
 };
 
-WishList.propTypes ={
-    bookDetails : PropTypes.array,
+WishList.propTypes = {
+    bookDetails: PropTypes.array,
 }
 
 export default WishList;

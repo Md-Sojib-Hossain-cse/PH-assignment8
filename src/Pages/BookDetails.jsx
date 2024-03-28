@@ -49,7 +49,7 @@ const BookDetails = () => {
             const existInReadList = oldReadList.find(singleReadList => singleReadList === id)
             if (!existInWishList && !existInReadList) {
                 const updatedReadList = [...oldReadList, id];
-                localStorage.setItem('readList', JSON.stringify(updatedReadList))
+                localStorage.setItem('wishlist', JSON.stringify(updatedReadList))
                 toast.success("Book added to your Wishlist")
             }
             else if(existInReadList){
@@ -60,7 +60,8 @@ const BookDetails = () => {
             }
         }
         else {
-            const existInReadList = oldReadList.find(singleReadList => singleReadList === id)
+            const existInReadList = oldReadList ? oldReadList.find(singleReadList => singleReadList === id) : ''
+            // const existInReadList = oldReadList.find(singleReadList => singleReadList === id)
             if (!existInReadList) {
                 alternativeWishList.push(id);
                 localStorage.setItem('wishlist', JSON.stringify(alternativeWishList))
@@ -113,12 +114,12 @@ const BookDetails = () => {
                     <button
                         onClick={() => handleReadList(bookId)}
                         className="btn text-[#131313] bg-transparent rounded-lg mt-6 md:mt-8 lg:mt-10 xl:mt-12 border border--[#1313134D]">
-                        <a to='/listed-books'>Read</a>
+                        <a>Read</a>
                     </button>
                     <button
                         onClick={() => handleWishList(bookId)}
                         className="btn text-white bg-[#50B1C9] rounded-lg mt-6 md:mt-8 lg:mt-10 xl:mt-12">
-                        <a to='/listed-books'>Wishlist</a>
+                        <a>Wishlist</a>
                     </button>
                 </div>
             </div>
