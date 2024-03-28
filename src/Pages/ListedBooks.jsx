@@ -15,7 +15,7 @@ const ListedBooks = () => {
                 <div className="flex justify-center items-center bg-[#23BE0A] rounded-lg relative h-12 w-36">
                     <select className="select select-bordered w-full bg-[#23BE0A] text-white max-w-xs">
                         <option disabled selected>Sort By</option>
-                        <option >Rating</option>
+                        <option>Rating</option>
                         <option>Number of Pages</option>
                         <option>Published Year</option>
                     </select>
