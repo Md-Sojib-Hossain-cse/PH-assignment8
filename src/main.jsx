@@ -14,6 +14,7 @@ import ErrorElement from './Components/ErrorElement/ErrorElement';
 import Authors from './Pages/Authors';
 import TopSelling from './Pages/TopSelling';
 import PagesToReadError from './Components/PagesToReadError/PagesToReadError';
+import ListedBooksError from './Components/ListedBooksError/ListedBooksError';
 
 
 const router = createBrowserRouter([
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
       {
         path: "/listed-books",
         element: <ListedBooks></ListedBooks>,
-        errorElement :<ErrorElement></ErrorElement>,
+        errorElement : <ListedBooksError></ListedBooksError>,
         loader : () => fetch('../books.json'),
       },
       {
