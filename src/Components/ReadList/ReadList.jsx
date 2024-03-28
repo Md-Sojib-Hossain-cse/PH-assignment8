@@ -2,9 +2,33 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import ReadBookCard from "../ReadBookCard/ReadBookCard";
 
-const ReadList = ({bookDetails , handleSortBookList}) => {
+const ReadList = ({bookDetails , sortBy}) => {
     const [readList , setReadList] = useState([]);
-    console.log(handleSortBookList)
+
+    if(sortBy === "rating"){
+        readList.sort(
+            (a, b) => {
+                return a.rating - b.rating;
+            }
+        )
+        readList.reverse
+    }
+    else if(sortBy === "totalPages"){
+        readList.sort(
+            (a, b) => {
+                return a.totalPages - b.totalPages;
+            }
+        )
+        readList.reverse
+    }
+    else if(sortBy === "yearOfPublishing"){
+        readList.sort(
+            (a, b) => {
+                return a.yearOfPublishing - b.yearOfPublishing;
+            }
+        )
+        readList.reverse
+    }
 
 
     useEffect(() => {
@@ -34,6 +58,6 @@ const ReadList = ({bookDetails , handleSortBookList}) => {
 
 ReadList.propTypes ={
     bookDetails : PropTypes.array,
-    handleSortBookList : PropTypes.func,
+    sortBy : PropTypes.string,
 }
 export default ReadList;

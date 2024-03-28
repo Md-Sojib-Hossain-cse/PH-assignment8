@@ -2,8 +2,33 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import WishBookCard from "../WishBookCard/WishBookCard";
 
-const WishList = ({ bookDetails }) => {
+const WishList = ({ bookDetails, sortBy }) => {
     const [wishList, setWishList] = useState([]);
+
+    if (sortBy === "rating") {
+        wishList.sort(
+            (a, b) => {
+                return a.rating - b.rating;
+            }
+        )
+        wishList.reverse
+    }
+    else if (sortBy === "totalPages") {
+        wishList.sort(
+            (a, b) => {
+                return a.totalPages - b.totalPages;
+            }
+        )
+        wishList.reverse
+    }
+    else if (sortBy === "yearOfPublishing") {
+        wishList.sort(
+            (a, b) => {
+                return a.yearOfPublishing - b.yearOfPublishing;
+            }
+        )
+        wishList.reverse
+    }
 
 
     useEffect(() => {
@@ -20,7 +45,7 @@ const WishList = ({ bookDetails }) => {
         })
     }, [bookDetails]);
 
-    if(wishList.length > 0){
+    if (wishList.length > 0) {
         return (
             <div className="space-y-4 lg:space-y-6 pt-8">
                 {
@@ -33,6 +58,7 @@ const WishList = ({ bookDetails }) => {
 
 WishList.propTypes = {
     bookDetails: PropTypes.array,
+    sortBy: PropTypes.string,
 }
 
 export default WishList;

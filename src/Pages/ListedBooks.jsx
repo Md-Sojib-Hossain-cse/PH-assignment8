@@ -3,10 +3,18 @@ import 'react-tabs/style/react-tabs.css';
 import ReadList from "../Components/ReadList/ReadList";
 import WishList from "../Components/WishList/WishList";
 import { Link, useLoaderData } from "react-router-dom";
+import { useState } from 'react';
 
 const ListedBooks = () => {
     const bookDetails = useLoaderData();
-    
+
+    const [sortBy , setSortBy] = useState('');
+
+
+    const handleSortBy = () => {
+        const selectOption = document.getElementById('selectSortBy').value;
+        setSortBy(selectOption);
+    }
 
 
     return (
@@ -16,11 +24,14 @@ const ListedBooks = () => {
             </div>
             <div className="flex justify-center items-center mb-8 md:mb-12">
                 <div className="flex justify-center items-center bg-[#23BE0A] rounded-lg relative h-12 w-36">
-                    <select className="select select-bordered w-full bg-[#23BE0A] text-white max-w-xs">
+                    <select 
+                    onChange={handleSortBy}
+                    id='selectSortBy' 
+                    className="select select-bordered w-full bg-[#23BE0A] text-white max-w-xs">
                         <option disabled selected>Sort By</option>
-                        <option >Rating</option>
-                        <option >Number of Pages</option>
-                        <option >Published Year</option>
+                        <option value='rating'>Rating</option>
+                        <option value='totalPages'>Number of Pages</option>
+                        <option value='yearOfPublishing'>Published Year</option>
                     </select>
                 </div>
             </div>
@@ -31,10 +42,10 @@ const ListedBooks = () => {
                         <Tab>WishList Books</Tab>
                     </TabList>
                     <TabPanel>
-                        <ReadList bookDetails={bookDetails}></ReadList>
+                        <ReadList bookDetails={bookDetails} sortBy={sortBy}></ReadList>
                     </TabPanel>
                     <TabPanel>
-                        <WishList bookDetails={bookDetails}></WishList>
+                        <WishList bookDetails={bookDetails} sortBy={sortBy}></WishList>
                     </TabPanel>
                 </Tabs>
             </div>
