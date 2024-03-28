@@ -1,4 +1,3 @@
-import { IoIosArrowDown } from "react-icons/io";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import ReadList from "../Components/ReadList/ReadList";
@@ -14,13 +13,12 @@ const ListedBooks = () => {
             </div>
             <div className="flex justify-center items-center mb-8 md:mb-12">
                 <div className="flex justify-center items-center bg-[#23BE0A] rounded-lg relative h-12 w-36">
-                    <select name="sort" id="sort" className="text-white bg-[#23BE0A] pl-4 rounded-lg h-full w-full text-lg font-semibold leading-5 outline-none appearance-none">
+                    <select className="select select-bordered w-full bg-[#23BE0A] text-white max-w-xs">
                         <option disabled selected>Sort By</option>
-                        <option value="a">Rating</option>
-                        <option value="a">Number of Pages</option>
-                        <option value="a">Published Year</option>
+                        <option>Rating</option>
+                        <option>Number of Pages</option>
+                        <option>Published Year</option>
                     </select>
-                    <IoIosArrowDown className="text-white font-bold absolute right-3" />
                 </div>
             </div>
             <div className="mb-8">

@@ -11,6 +11,9 @@ import ListedBooks from './Pages/ListedBooks';
 import PagesToRead from './Pages/PagesToRead';
 import BookDetails from './Pages/BookDetails';
 import ErrorElement from './Components/ErrorElement/ErrorElement';
+import Authors from './Pages/Authors';
+import TopSelling from './Pages/TopSelling';
+import PagesToReadError from './Components/PagesToReadError/PagesToReadError';
 
 
 const router = createBrowserRouter([
@@ -27,17 +30,29 @@ const router = createBrowserRouter([
       {
         path: "/listed-books",
         element: <ListedBooks></ListedBooks>,
+        errorElement :<ErrorElement></ErrorElement>,
         loader : () => fetch('../books.json'),
       },
       {
         path: "/pages-to-read",
         element: <PagesToRead></PagesToRead>,
-        loader : () => fetch('../books.json')
+        errorElement :<PagesToReadError></PagesToReadError>,
+        loader : () => fetch('../books.json'),
+      },
+      {
+        path: "/authors",
+        element: <Authors></Authors>,
+        loader : () => fetch('authors.json')
+      },
+      {
+        path: "/top-selling",
+        element: <TopSelling></TopSelling>,
+        loader : () => fetch('../topsellingbooks.json')
       },
       {
         path : '/book-details/:bookId',
         element : <BookDetails></BookDetails>,
-        loader : () => fetch('../books.json')
+        loader : () => fetch('books.json')
       }
     ],
   },

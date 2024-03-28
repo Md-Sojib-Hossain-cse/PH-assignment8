@@ -42,12 +42,14 @@ const PagesToRead = () => {
         return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
     };
 
+
+
     return (
         <div className='mt-12'>
-            <ResponsiveContainer width="95%" height={600}>
+            <ResponsiveContainer width="95%" height={400}>
                 <BarChart
                     width={1000}
-                    height={700}
+                    height={400}
                     data={data}
                     margin={{
                         top: 20,

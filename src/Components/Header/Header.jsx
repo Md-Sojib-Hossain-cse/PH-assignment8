@@ -2,10 +2,12 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
 
-    const links = <div className="text-[#131313CC] text-lg flex flex-col lg:flex-row items-center lg:gap-4">
+    const links = <div className="text-[#131313CC] text-lg flex flex-col lg:flex-row items-center gap-1 lg:gap-2">
         <li><NavLink to='/' className={({isActive}) => isActive ? "text-lg text-[#23BE0A] font-semibold px-4 py-3 border border-[#23BE0A] rounded-lg" : "text-[#131313CC] text-lg px-4 py-3"}>Home</NavLink></li>
         <li><NavLink to='/listed-books' className={({isActive}) => isActive ? "text-lg text-[#23BE0A] font-semibold px-4 py-3 border border-[#23BE0A] rounded-lg" : "text-[#131313CC] text-lg px-4 py-3"}>Listed Books</NavLink></li>        
         <li><NavLink to='/pages-to-read' className={({isActive}) => isActive ? "text-lg text-[#23BE0A] font-semibold px-4 py-3 border border-[#23BE0A] rounded-lg" : "text-[#131313CC] text-lg px-4 py-3"}>Pages to Read</NavLink></li>
+        <li><NavLink to='/authors' className={({isActive}) => isActive ? "text-lg text-[#23BE0A] font-semibold px-4 py-3 border border-[#23BE0A] rounded-lg" : "text-[#131313CC] text-lg px-4 py-3"}>Authors</NavLink></li>
+        <li><NavLink to='/top-selling' className={({isActive}) => isActive ? "text-lg text-[#23BE0A] font-semibold px-4 py-3 border border-[#23BE0A] rounded-lg" : "text-[#131313CC] text-lg px-4 py-3"}>Top Selling</NavLink></li>
     </div>
 
     return (

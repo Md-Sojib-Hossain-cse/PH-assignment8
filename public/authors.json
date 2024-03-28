@@ -1,0 +1,52 @@
+[
+    {
+        "author_name": "Humayun Ahmed",
+        "author_image": "https://i.ibb.co/0rKFh3R/download.jpg",
+        "books": [
+            "Deyal",
+            "Misir Ali Series",
+            "Himu Series",
+            "Nondito Noroke"
+        ]
+    },
+    {
+        "author_name": "Muhammed Zafar Iqbal",
+        "author_image": "https://i.ibb.co/0Z5byFN/zafariqbal.jpg",
+        "books": [
+            "Amar Bondhu Rashed",
+            "Amar Priyo Bhoutik Golpo",
+            "Biggani Shofdor Alir Moha Moha Abishkar",
+            "Dipu Number Two"
+        ]
+    },
+    {
+        "author_name": "Jahanara Imam",
+        "author_image": "https://i.ibb.co/6bRvVgF/jahanaraimam.jpg",
+        "books": [
+            "Ekattorer Dinguli",
+            "Uttaradhikar",
+            "Ami Birangana Bolchhi",
+            "Dui Muktijoddhar Ghran"
+        ]
+    },
+    {
+        "author_name": "Muhammad Mansuruddin",
+        "author_image": "https://i.ibb.co/pJZ0NB1/Mansuruddin-Muhammad.jpg",
+        "books": [
+            "Jibon Theke Neya",
+            "Chhotoder Jibon",
+            "Nayak Raj Razzak",
+            "Mayabi Porda Dule Otho"
+        ]
+    },
+    {
+        "author_name": "Shirshendu Mukhopadhyay",
+        "author_image": "https://i.ibb.co/mTT0rGF/download-1.jpg",
+        "books": [
+            "Manojder Adbhut Bari",
+            "Gourer Kabach",
+            "Golmaal",
+            "Dhinka Chika"
+        ]
+    }
+]

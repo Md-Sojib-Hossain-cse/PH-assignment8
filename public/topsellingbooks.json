@@ -1,0 +1,42 @@
+[
+    {
+        "title": "A Golden Age",
+        "author": "Tahmima Anam",
+        "genre": "Historical Fiction",
+        "description": "Set in the backdrop of Bangladesh's war for independence, A Golden Age is a poignant tale of a mother's struggle and sacrifice for her children amidst the chaos of war.",
+        "price": 15.99,
+        "rating": 4.5,
+        "publisher": "HarperCollins",
+        "cover_image": "https://i.ibb.co/rfdrcNC/agoldenage.jpg"
+    },
+    {
+        "title": "The Good Muslim",
+        "author": "Tahmima Anam",
+        "genre": "Fiction",
+        "description": "The Good Muslim is a powerful exploration of faith, family, and the challenges of modernity in Bangladesh. It follows the lives of two siblings as they navigate through the aftermath of war and political turmoil.",
+        "price": 12.49,
+        "rating": 4.2,
+        "publisher": "Penguin Books",
+        "cover_image": "https://i.ibb.co/TMcgJvk/thegoodmuslim.jpg"
+    },
+    {
+        "title": "River of Smoke",
+        "author": "Amitav Ghosh",
+        "genre": "Historical Fiction",
+        "description": "Though not entirely set in Bangladesh, River of Smoke delves into the history of the opium trade, which significantly impacted Bangladesh's economy during the British colonial period. It's a rich narrative that intertwines multiple characters and their destinies.",
+        "price": 14.99,
+        "rating": 4.3,
+        "publisher": "Farrar, Straus and Giroux",
+        "cover_image": "https://i.ibb.co/gjB72G1/riverofsmoke.jpg"
+    },
+    {
+        "title": "The Hungry Tide",
+        "author": "Amitav Ghosh",
+        "genre": "Fiction",
+        "description": "Set in the Sundarbans, The Hungry Tide is a mesmerizing tale of love, adventure, and the clash between humans and nature. Ghosh's vivid prose brings the beauty and danger of this unique landscape to life.",
+        "price": 13.79,
+        "rating": 4.4,
+        "publisher": "Houghton Mifflin Harcourt",
+        "cover_image": "https://i.ibb.co/xjLg0DX/thehungrytide.jpg"
+    }
+]

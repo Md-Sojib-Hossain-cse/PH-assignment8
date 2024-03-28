@@ -19,14 +19,16 @@ const ReadList = ({bookDetails}) => {
             setReadList(updatedReadList);
         })
     } , [bookDetails]);
-    
-    return (
-        <div className="space-y-4 lg:space-y-6 pt-8">
-            {
-                readList.map(readBook => <ReadBookCard key={readBook.bookId} readBook={readBook}></ReadBookCard>)
-            }
-        </div>
-    );
+
+    if(readList.length > 0){
+        return (
+            <div className="space-y-4 lg:space-y-6 pt-8">
+                {
+                    readList.map(readBook => <ReadBookCard key={readBook.bookId} readBook={readBook}></ReadBookCard>)
+                }
+            </div>
+        );
+    }
 };
 
 ReadList.propTypes ={
