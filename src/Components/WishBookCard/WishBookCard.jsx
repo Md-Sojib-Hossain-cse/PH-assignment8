@@ -3,9 +3,10 @@ import Tags from "../Tags/Tags";
 import { IoLocationOutline } from "react-icons/io5";
 import { GoPeople } from "react-icons/go";
 import { PiNoteDuotone } from "react-icons/pi";
+import { Link } from "react-router-dom";
 
 const WishBookCard = ({ wishbook }) => {
-    const { image, bookName, author, tags, yearOfPublishing, publisher, rating, category, totalPages } = wishbook;
+    const {bookId, image, bookName, author, tags, yearOfPublishing, publisher, rating, category, totalPages } = wishbook;
     return (
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-6 border border-[#13131326] rounded-lg lg:rounded-xl xl:rounded-2xl p-4 lg:p-6">
             <div className="flex justify-center items-center bg-[#1313130D] rounded-lg lg:rounded-xl xl:rounded-2xl">
@@ -30,7 +31,7 @@ const WishBookCard = ({ wishbook }) => {
                 <div className="pt-4 border-t border-[#13131326] flex gap-3 items-center">
                     <p className='text-[#328EFF] text-base font-medium leading-5 px-4 py-2 bg-[#328EFF26] rounded-3xl'>Category : {category}</p>
                     <p className='text-[#FFAC33] text-base font-medium leading-5 px-4 py-2 bg-[#FFAC3326] rounded-3xl'>Rating : {rating}</p>
-                    <button className='text-white text-base font-medium leading-5 px-4 py-2 bg-[#23BE0A] rounded-3xl'>View Details</button>
+                    <Link to={`/book-details/${bookId}`}><button className='text-white text-base font-medium leading-5 px-4 py-2 bg-[#23BE0A] rounded-3xl'>View Details</button></Link>
                 </div>
             </div>
         </div>

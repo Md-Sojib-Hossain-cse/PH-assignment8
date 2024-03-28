@@ -19,6 +19,7 @@ const ReadList = ({bookDetails}) => {
             setReadList(updatedReadList);
         })
     } , [bookDetails]);
+    
     return (
         <div className="space-y-4 lg:space-y-6 pt-8">
             {

@@ -20,6 +20,25 @@ const WishList = ({ bookDetails }) => {
         })
     }, [bookDetails]);
 
+    // if(wishList.length > 0){
+    //     return (
+    //         <div className="space-y-4 lg:space-y-6 pt-8">
+    //             {
+    //                 wishList.map(wishbook => <WishBookCard key={wishbook.bookId} wishbook={wishbook}></WishBookCard>)
+    //             }
+    //         </div>
+    //     );
+    // }
+    // else{
+    //     return (
+    //         <div className="space-y-4 lg:space-y-6 pt-8">
+    //             {/* {
+    //                 wishList.map(wishbook => <WishBookCard key={wishbook.bookId} wishbook={wishbook}></WishBookCard>)
+    //             } */}
+    //         </div>
+    //     );
+    // }
+
     return (
         <div className="space-y-4 lg:space-y-6 pt-8">
             {
