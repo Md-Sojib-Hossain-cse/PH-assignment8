@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import ReadBookCard from "../ReadBookCard/ReadBookCard";
 
-const ReadList = ({bookDetails}) => {
+const ReadList = ({bookDetails , handleSortBookList}) => {
     const [readList , setReadList] = useState([]);
+    console.log(handleSortBookList)
 
 
     useEffect(() => {
@@ -33,5 +34,6 @@ const ReadList = ({bookDetails}) => {
 
 ReadList.propTypes ={
     bookDetails : PropTypes.array,
+    handleSortBookList : PropTypes.func,
 }
 export default ReadList;

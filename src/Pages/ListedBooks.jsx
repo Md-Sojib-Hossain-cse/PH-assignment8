@@ -6,6 +6,9 @@ import { Link, useLoaderData } from "react-router-dom";
 
 const ListedBooks = () => {
     const bookDetails = useLoaderData();
+    
+
+
     return (
         <div className="mt-8 xl:mt-10">
             <div className="flex justify-center items-center h-24 w-full bg-[#1313130D] rounded-lg md:rounded-xl xl:rounded-2xl mb-4 md:mb-8">
@@ -15,9 +18,9 @@ const ListedBooks = () => {
                 <div className="flex justify-center items-center bg-[#23BE0A] rounded-lg relative h-12 w-36">
                     <select className="select select-bordered w-full bg-[#23BE0A] text-white max-w-xs">
                         <option disabled selected>Sort By</option>
-                        <option>Rating</option>
-                        <option>Number of Pages</option>
-                        <option>Published Year</option>
+                        <option >Rating</option>
+                        <option >Number of Pages</option>
+                        <option >Published Year</option>
                     </select>
                 </div>
             </div>
